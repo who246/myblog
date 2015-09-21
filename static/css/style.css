@@ -1,0 +1,28 @@
+# Empty CSS file for your own CSS
+.fixed{
+    background: none repeat scroll 0 0 #1B1B1B;
+    border-bottom: 1px solid #555555;
+    height: 40px;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 99;
+    padding: 0 15%;
+}
+ .article-list {       
+    padding: 2% 5%;  
+} 
+ .col-md-4 {       
+    padding: 2% 5%;  
+} 
+ 
+body { padding-top: 50px; }
+.article-list a {color:#000000;}
+.article-list a:hover{color:#515151;      text-decoration:underlin;          }
+
+.roll a {color:#FFFFFF;}
+.roll a:hover{color:#FFFAFA;      text-decoration:underlin;          }
+
+.roll img{width:1191px;height:345px;}
+.subhead{background: url(http://www.bootcss.com/p/unslider/img/sunset.jpg);color:#FFFFFF;}
