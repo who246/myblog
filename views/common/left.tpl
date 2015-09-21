@@ -16,7 +16,7 @@
              
 			<div id="cyReping" role="cylabs" data-use="reping"></div>
 			
-			<script type="text/javascript" charset="utf-8" src="http://changyan.itc.cn/js/??lib/jquery.js,changyan.labs.js?appid=cyrYGvclA"></script>
+			<script type="text/javascript" charset="utf-8" src="http://changyan.itc.cn/js/??lib/jquery.js,changyan.labs.js?appid="></script>
 		</div>            
 			 
 		</div>
