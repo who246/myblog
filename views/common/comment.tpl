@@ -3,7 +3,7 @@
 <script type="text/javascript">
     window._config = { showScore: true };
     window.changyan.api.config({
-        appid: '',
+        appid: 'cyrYGvclA',
         conf: 'prod_a0cfb392bcb5ce21cfda33b02f4908ed'
     });
 </script> 
