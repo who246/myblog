@@ -7,7 +7,7 @@
             <h4>
               CCFBLOG
             </h4>
-            <p>本网站本文为博主原创文章，未经博主允许不得转载。</p>
+            <p>本网站本文为博主原创文章，未经博主允许不得转载。感谢<a href="http://www.alauda.cn/" target="_blank">灵雀云<a/>提供docker主机支持</p>
           </div>
           <div class="col-sm-6  col-lg-5 col-lg-offset-1">
             <div class="row about">
