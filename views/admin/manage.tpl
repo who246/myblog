@@ -80,7 +80,18 @@ $(".mody").click(function(){
   <div class="col-lg-6">
     <div class="input-group"> 
       <span class="input-group-btn">
-       <button class="btn btn-default del" url="/admin/construct/bulid" link="tids" type="button">更新并重启系统</button>
+       <button class="btn btn-default del" url="/admin/construct/update" link="tids" type="button">更新并重启系统</button>
+      </span>
+    </div><!-- /input-group -->
+  </div><!-- /.col-lg-6 -->
+</div><!-- /.row -->
+<hr/>
+<div class="row">
+  
+  <div class="col-lg-6">
+    <div class="input-group"> 
+      <span class="input-group-btn">
+       <button class="btn btn-default del" url="/admin/construct/bulid" link="tids" type="button">重新构建并重启系统（需要配置环境）</button>
       </span>
     </div><!-- /input-group -->
   </div><!-- /.col-lg-6 -->
