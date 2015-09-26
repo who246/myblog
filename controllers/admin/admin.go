@@ -8,6 +8,7 @@ import (
 	"github.com/astaxie/beego/validation"
     "strings"
 	"strconv"
+	"os/exec" 
 )
 
 
@@ -186,4 +187,23 @@ func  (this *ConfigController)  Set(){
 	} else{
  	this.ToJsonSuccess("更改失败");
 	}
+}
+//
+type ConstructController struct {
+	layout.AdminLayoutController
+}
+func  (this *ConstructController)  Bulid(){
+	cmd := exec.Command("sh", "bulid.sh")
+    err := cmd.Start();
+    if err != nil {
+        panic(err.Error())
+    }
+ 
+   
+    if err := cmd.Wait(); err != nil {
+        panic(err.Error())
+    }
+    
+	this.Data["json"]="等待重启";
+	this.ServeJson();
 }

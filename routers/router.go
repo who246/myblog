@@ -16,4 +16,5 @@ func init() {
 	beego.AutoPrefix("/admin",&admin.AticleController{})
     beego.AutoPrefix("/admin",&admin.TypeController{})
     beego.AutoPrefix("/admin",&admin.ConfigController{})
+	beego.AutoPrefix("/admin",&admin.ConstructController{})
 }

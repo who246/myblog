@@ -5,7 +5,7 @@ $(document).ready(function(){
      var url = $(this).attr("url");
 	 var link = $(this).attr("link");
 	 var ids = $("#"+link).val();
-	if (confirm("是否确认删除！") == false) return;   
+	if (confirm("是否确认！") == false) return;   
 	$.post(url,{ids:ids},function(r){
       alert(r.msg);
      }, "json");
@@ -69,6 +69,18 @@ $(".mody").click(function(){
 	 <span>
       <span class="input-group-btn">
        <button class="btn btn-default banner"  type="button">添加</button>
+      </span>
+    </div><!-- /input-group -->
+  </div><!-- /.col-lg-6 -->
+</div><!-- /.row -->
+
+<hr/>
+<div class="row">
+  
+  <div class="col-lg-6">
+    <div class="input-group"> 
+      <span class="input-group-btn">
+       <button class="btn btn-default del" url="/admin/construct/bulid" link="tids" type="button">更新并重启系统</button>
       </span>
     </div><!-- /input-group -->
   </div><!-- /.col-lg-6 -->
