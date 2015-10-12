@@ -1,8 +1,8 @@
 package routers
 
 import (
-	"myblog/controllers"
-	"myblog/controllers/admin"
+	"github.com/who246/myblog/controllers"
+	"github.com/who246/myblog/controllers/admin"
 	"github.com/astaxie/beego"
 )
 

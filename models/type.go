@@ -18,7 +18,9 @@ func init(){
 func GetAllType() (t1 []Type) {
 	var t []Type
 	_,err := orm.NewOrm().QueryTable("goblog_type").OrderBy("-CreateTime").All(&t);
+	if err != nil{
 	beego.Error(err);
+	}
 	return t;
 }
  

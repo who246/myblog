@@ -18,7 +18,7 @@
       <time data-updated="true" pubdate="">{{dateformat .article.ModifyTime "2006-01-02 15:04:00"}} </time>
         
 		
-         | <a href="#SOHUCS">评论</a> | 所属分类:{{range .types}} {{if eq .Id $.article.TypeId}} <a href="/?tid={{.Id}}">{{.Name}}</a> {{end}} {{end}}
+         | <a href="#SOHUCS">评论</a> | 所属分类:{{range .types}} {{if eq .Id $.article.TypeId}} <a href="/?tid={{.Id}}">{{.Name}}</a> {{end}} {{end}} | 浏览次数:{{.article.ClickNum}} 
         
       </p>
     

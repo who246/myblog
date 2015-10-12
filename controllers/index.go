@@ -3,7 +3,7 @@ package controllers
 import (
 	"github.com/astaxie/beego"
 	"github.com/astaxie/beego/utils/pagination"
-	"myblog/models"
+	"github.com/who246/myblog/models"
 )
 
 type MainController struct {

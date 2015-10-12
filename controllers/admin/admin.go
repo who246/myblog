@@ -2,9 +2,9 @@ package admin
 
 import (
 	"github.com/astaxie/beego"
-	"myblog/models"
-	"myblog/layout"
-	"myblog/utils"
+	"github.com/who246/myblog/models"
+	"github.com/who246/myblog/layout"
+	"github.com/who246/myblog/utils"
 	"github.com/astaxie/beego/validation"
     "strings"
 	"strconv"
@@ -218,7 +218,6 @@ func  (this *ConstructController)  Bulid(){
     if err := cmd.Wait(); err != nil {
         panic(err.Error())
     }
-    
 	this.Data["json"]="等待重启";
 	this.ServeJson();
 }

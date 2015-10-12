@@ -1,20 +1,20 @@
 package models
 
 import (
-	"github.com/astaxie/beego"
 	"github.com/astaxie/beego/orm"
 	"time"
- 
+  
 )
 
 type Article struct {
-    Id int `form:"id"`
-    CreateTime time.Time `orm:"auto_now_add;type(datetime)"`
-	ModifyTime time.Time  `orm:"auto_now;type(datetime)"`
-	Title   string 	`form:"title";valid:"Required;",orm:"size(60)";`
-	Content string  `form:"content";valid:"Required;",orm:"column(content)"` 
-    TypeId    int `form:"typeId";valid:"Required;"`
-	
+    Id int `form:"id" redis:"id"`
+    CreateTime time.Time `orm:"auto_now_add;type(datetime)" redis:"createTime"`
+	ModifyTime time.Time  `orm:"auto_now;type(datetime)" redis:"modifyTime"`
+	Title   string 	`form:"title" valid:"Required";orm:"size(60)" redis:"title"`
+	//Title   string 	`orm:"size(60)" valid:"Required"`
+	Content string  `form:"content" valid:"Required",orm:"column(content)" redis:"content"` 
+    TypeId    int `form:"typeId" valid:"Required" redis:"typeId"`
+	ClickNum  int `redis:"clickNum"`
 }
  
 func init() {
@@ -39,7 +39,6 @@ func InsertArt(m *Article) {
 	 o.Commit();
 }
 func   GetArtPageList(pageSize,pageStart int64,extend map[string] string,title string) ([]orm.Params, error)  {
-	beego.Info(extend);
 	o := orm.NewOrm()
     qs := o.QueryTable("goblog_article")
      for k, v:= range extend{
@@ -69,4 +68,7 @@ func GetCount(extend map[string] string,title string) (count int64,err error){
 }
 func GetByProperty(art * Article) (err error){
 	return orm.NewOrm().Read(art);
+}
+func AddClickNum(id ,num int) (count int64,err error){
+	return orm.NewOrm().Update(&Article{Id: id,ClickNum:num},"ClickNum")
 }
