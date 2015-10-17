@@ -46,6 +46,8 @@ func (this *AticleController) Add(){
     }
 	
 	models.InsertArt(&article);
+	types := models.GetAllType();	
+	this.Data["types"] = types
 	article.Content = "";
 	article.Title = "";
 	article.TypeId = -1;

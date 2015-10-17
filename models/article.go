@@ -12,7 +12,7 @@ type Article struct {
 	ModifyTime time.Time  `orm:"auto_now;type(datetime)" redis:"modifyTime"`
 	Title   string 	`form:"title" valid:"Required";orm:"size(60)" redis:"title"`
 	//Title   string 	`orm:"size(60)" valid:"Required"`
-	Content string  `form:"content" valid:"Required",orm:"column(content)" redis:"content"` 
+	Content string  `form:"content" valid:"Required" orm:"type(text);null" redis:"content"` 
     TypeId    int `form:"typeId" valid:"Required" redis:"typeId"`
 	ClickNum  int `redis:"clickNum"`
 }
