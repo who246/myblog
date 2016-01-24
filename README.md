@@ -1,7 +1,6 @@
 CCFBLOG(Golang development)
 ==== 
 基于beego框架Golang语言开发的博客
-演示地址：http://blog.lcsg.pw/
 #首页
 ![ccfblog](http://i13.tietuku.com/6eedcc2e716004f0.png) 
 #内容页
